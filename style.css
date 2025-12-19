@@ -1,0 +1,64 @@
+#b-icon {
+    border-radius: 100px;
+    height: 30px;
+}
+
+/* Responsive grid: auto-fits columns based on screen width */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+/* Reusable photo style: consistent size + no stretching */
+.photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* square tiles (change to 4/3 or 16/9 if you want) */
+    object-fit: cover;
+    /* crops image nicely */
+    object-position: center;
+    /* keeps center visible */
+    border-radius: 14px;
+    display: block;
+}
+
+/* Optional: slightly bigger tiles on larger screens */
+@media (min-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 150px;
+}
+
+
+.future-card {
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.future-card h5 {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.future-card p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.future-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
